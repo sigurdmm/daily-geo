@@ -1,11 +1,11 @@
-package com.sigurd.geoguessr.controller;
+package com.sigurd.dailygeo.controller;
 
-import com.sigurd.geoguessr.model.GameSettings;
-import com.sigurd.geoguessr.service.GameService;
+import com.sigurd.dailygeo.model.GameSettings;
+import com.sigurd.dailygeo.service.GameService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import static com.sigurd.geoguessr.model.GeoguessrV3ApiModels.GameScores;
+import static com.sigurd.dailygeo.model.GeoguessrV3ApiModels.GameScores;
 
 @RestController
 @RequestMapping("/api/game/")

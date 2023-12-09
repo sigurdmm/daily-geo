@@ -1,9 +1,9 @@
-package com.sigurd.geoguessr.service;
+package com.sigurd.dailygeo.service;
 
-import com.sigurd.geoguessr.model.GameSettings;
+import com.sigurd.dailygeo.model.GameSettings;
 import org.springframework.stereotype.Service;
 
-import static com.sigurd.geoguessr.model.GeoguessrV3ApiModels.GameScores;
+import static com.sigurd.dailygeo.model.GeoguessrV3ApiModels.GameScores;
 
 @Service
 public class GameService {

@@ -1,11 +1,11 @@
-package com.sigurd.geoguessr.service;
+package com.sigurd.dailygeo.service;
 
-import com.sigurd.geoguessr.model.GameSettings;
+import com.sigurd.dailygeo.model.GameSettings;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import static com.sigurd.geoguessr.model.GeoguessrV3ApiModels.GameScores;
+import static com.sigurd.dailygeo.model.GeoguessrV3ApiModels.GameScores;
 
 @Service
 public class ApiService {

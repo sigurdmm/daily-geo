@@ -1,4 +1,4 @@
-package com.sigurd.geoguessr.config;
+package com.sigurd.dailygeo.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

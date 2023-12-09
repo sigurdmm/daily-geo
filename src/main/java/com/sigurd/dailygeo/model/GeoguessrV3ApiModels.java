@@ -1,4 +1,4 @@
-package com.sigurd.geoguessr.model;
+package com.sigurd.dailygeo.model;
 
 import java.util.List;
 

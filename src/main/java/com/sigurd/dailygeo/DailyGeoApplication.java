@@ -1,13 +1,13 @@
-package com.sigurd.geoguessr;
+package com.sigurd.dailygeo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GeoguessrApplication {
+public class DailyGeoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GeoguessrApplication.class, args);
+		SpringApplication.run(DailyGeoApplication.class, args);
 	}
 
 }

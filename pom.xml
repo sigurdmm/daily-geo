@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sigurd</groupId>
-	<artifactId>geoguessr</artifactId>
+	<artifactId>daily-geo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>geoguessr</name>
 	<description>geoguessr</description>
