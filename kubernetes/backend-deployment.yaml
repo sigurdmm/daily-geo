@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: sigurdmelsom/daily-geo:backend
+          volumeMounts:
+            - name: secret-volume
+              mountPath: /etc/secret-volume
+              readOnly: true
+          envFrom:
+            - secretRef:
+                name: geoguessr-ncfa-cookie
+          ports:
+            - containerPort: 8080
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: geoguessr-ncfa-cookie
