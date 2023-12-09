@@ -1,5 +1,6 @@
 package com.sigurd.geoguessr.controller;
 
+import com.sigurd.geoguessr.model.GameSettings;
 import com.sigurd.geoguessr.service.GameService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,5 +27,19 @@ public class GameController {
             @RequestParam(required = false, defaultValue = "100") int limit
     ) {
         return ResponseEntity.ok(gameService.getScoresFromGameId(gameId, limit));
+    }
+
+    @GetMapping("/url")
+    public ResponseEntity<String> getGameUrl(
+            @RequestParam(required = false, defaultValue = "62a44b22040f04bd36e8a914") String map,
+            @RequestParam(required = false, defaultValue = "true") Boolean forbidMoving,
+            @RequestParam(required = false, defaultValue = "false") Boolean forbidRotating,
+            @RequestParam(required = false, defaultValue = "false") Boolean forbidZooming,
+            @RequestParam(required = false, defaultValue = "60") Integer timeLimit,
+            @RequestParam(required = false, defaultValue = "5") Integer rounds
+    ) {
+        GameSettings settings = new GameSettings(map, forbidMoving, forbidRotating, forbidZooming, timeLimit, rounds);
+        String gameUrl = gameService.getGameUrl(settings);
+        return ResponseEntity.ok(gameUrl);
     }
 }
